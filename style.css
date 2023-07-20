@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: rgb(179,229,159);
+    background: radial-gradient(circle, rgba(179,229,159,1) 0%, rgb(132, 190, 146) 37%);
+}
+
+.txt {
+    font-weight: bold;
+    font-family: 'Tektur', cursive;
+}
+
+.logoBen10 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.fundo {
+    height: 500px;
+    opacity: 10%;
+}
+
+.geral {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaJogo {
+    height: 800px;
+    width: 1800px;
+    background-color: orange;
+}
+
+.title {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.contadorVidas {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 150px;
+    padding-left: 250px;
+    position: absolute;
+    flex-direction: column;
+}
+
+.areaVidas {
+    height: 200px;
+}
+
+.txtTentativas {
+    font-size: 2em;
+    font-weight: bold;    
+}
+
+#vidas {
+    font-size: 6em;
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+    height: 90px;
+    border: 0px;
+    position: relative;
+    bottom: 143px;
+    right: 2px;
+    background-color: transparent;
+}
+
+#palavras {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputLetras {
+    text-align: center;
+    font-size: 3em;
+    width: 50px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 2px;
+    border-bottom-color: #000000;
+    margin-right: 10px;
+}
+
+.espaco {
+    text-align: center;
+    font-size: 3em;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+#tentativa {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 200px;
+    right: 200px;
+    z-index: 1;
+}
+
+#inputLetra {
+    border-radius: 5px;
+    border: 2px solid #000;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    font-size: 2em;
+
+}
+
+#letrasUsadas {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 260px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.letrasUsadas {
+    padding-top: 20px;
+}
+
+#vilgax {
+    height: 200px;
+    justify-content: end;
+    position: relative;
+    bottom: 700px;
+    flex-direction: column;
+    display: grid;
+    gap: 0;
+    grid-template-areas: 
+    "cabeca cabeca"
+    "troncoEsquerdo troncoDireito"
+    "pernaEsquerda pernaDireita"
+    ;
+}
+
+#cabeca {
+    /* height: 80px; */
+    grid-area: cabeca;
+}
+
+#troncoEsquerdo {
+    grid-area: troncoEsquerdo;
+    width: 187px;
+}
+
+#troncoDireito {
+    /* height: 280px; */
+    grid-area: troncoDireito;
+    width: 204px;
+}
+
+#pernaEsquerda {
+    /* height: 430px; */
+    grid-area: pernaEsquerda;
+    width: 187px;
+}
+
+#pernaDireita {
+    /* height: 430px; */
+    grid-area: pernaDireita;
+}

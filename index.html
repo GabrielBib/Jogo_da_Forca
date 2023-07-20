@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/IMG/Icone_forca.png" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da Forca</title>
+</head>
+
+<body>
+    <div class="logoBen10">
+        <img src="/IMG/Logo_ben_10.png" alt="Logo Ben 10" class="fundo">
+    </div>
+    <div class="geral">
+        <div class="areaJogo">
+            <h1 class="txt title">Jogo da Forca</h1>
+            <div class="contadorVidas">
+                <h1 class="txt txtTentativas">Tentativas</h1>
+                <img src="/IMG/Contador_vidas.png" alt="Contador de vidas" class="areaVidas">
+                <input type="text" value="5" readonly id="vidas">
+            </div>
+            <div id="palavras"></div>
+            <div id="tentativa">
+                <input type="text" name="" id="inputLetra" maxlength="1">
+            </div>
+            <div id="letrasUsadas">
+                <div class="txt">
+                    <h1>Letras ja usadas!</h1>
+                    <h1 class="letrasUsadas"></h1>
+                </div>
+            </div>
+            <div id="vilgax">
+                <!-- <div> -->
+                <img src="/IMG/cabeça.png" alt="" id="cabeca">
+                <!-- </div>
+                    <div class=""> -->
+                <!-- <div> -->
+                <img src="/IMG/tronco_esquerdo.png" alt="" id="troncoEsquerdo">
+                <img src="/IMG/tronco_direito.png" alt="" id="troncoDireito">
+                <!-- </div>
+                        <div> -->
+                <img src="/IMG/perna_esquerda.png" alt="" id="pernaEsquerda">
+                <img src="/IMG/perna_direita.png" alt="" id="pernaDireita">
+                <!-- </div>
+                    </div> -->
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
