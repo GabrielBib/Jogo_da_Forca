@@ -37,7 +37,7 @@ html, body {
 .areaJogo {
     height: 800px;
     width: 1800px;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .title {
@@ -158,26 +158,31 @@ html, body {
 #cabeca {
     /* height: 80px; */
     grid-area: cabeca;
+    transition: 0.5s;
 }
 
 #troncoEsquerdo {
     grid-area: troncoEsquerdo;
     width: 187px;
+    transition: 0.5s;
 }
 
 #troncoDireito {
     /* height: 280px; */
     grid-area: troncoDireito;
     width: 204px;
+    transition: 0.5s;
 }
 
 #pernaEsquerda {
     /* height: 430px; */
     grid-area: pernaEsquerda;
     width: 187px;
+    transition: 0.5s;
 }
 
 #pernaDireita {
     /* height: 430px; */
     grid-area: pernaDireita;
+    transition: 0.5s;
 }

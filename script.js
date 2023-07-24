@@ -39,6 +39,7 @@ function criaInputs(palavraSorteada) {
     for (i = 0; i < palavraSorteada.length; i++) {
         if (palavraSorteada[i] != " ") {
             var input = document.createElement("input");
+
             input.type = "text";
             input.maxLength = 1;
             input.classList.add("inputLetras");
@@ -55,7 +56,7 @@ function criaInputs(palavraSorteada) {
             divInputs.appendChild(input);
         }
     }
-    
+
 }
 
 
@@ -86,9 +87,12 @@ letraTentativa.addEventListener("keydown", function (event) {
             letraTentativa.setCustomValidity('');
             if (letraDigitada !== "") {
                 guardaLetras.push(letraDigitada);
+
                 verificaLetra(letraDigitada);
-                letrasUsadas(letraDigitada)
+                letrasUsadas(letraDigitada);
+
                 letraTentativa.value = "";
+
                 // console.log(guardaLetras);
             }
         }
@@ -106,15 +110,25 @@ function letrasUsadas(letra) {
 // Verifica se a letra usada tem na palavra sorteada
 
 function verificaLetra(letra) {
+    let cont = 0;
+
     if (palavraEscolhida.includes(letra)) {
         for (i = 0; i < palavraEscolhida.length; i++) {
             var inputLetra = document.querySelector(".a" + i);
-            
+
+            if (palavraEscolhida[i] == " ") {
+                cont++
+                console.log(cont);
+            }
+
             if (letra === palavraEscolhida[i]) {
                 inputLetra.value += palavraEscolhida[i];
                 verificaSeGanhou.push(letra);
+
                 // console.log(verificaSeGanhou);
-                if (palavraEscolhida.length == verificaSeGanhou.length){
+                // console.log(palavraEscolhida);
+
+                if (palavraEscolhida.length - cont == verificaSeGanhou.length) {
                     alert("Parabéns!! Você ganhou")
                     recarregaPagina();
                 }
@@ -122,7 +136,22 @@ function verificaLetra(letra) {
         }
     } else {
         vidas.value--;
-        if (vidas.value == 0) {
+        if (vidas.value == 4) {
+            pernaEsquerda = document.getElementById("pernaEsquerda");
+            pernaEsquerda.removeAttribute("hidden");
+        } else if (vidas.value == 3) {
+            pernaDireita = document.getElementById("pernaDireita");
+            pernaDireita.removeAttribute("hidden");
+        } else if (vidas.value == 2) {
+            troncoDireito = document.getElementById("troncoDireito");
+            troncoDireito.removeAttribute("hidden");
+        } else if (vidas.value == 1) {
+            troncoEsquerdo = document.getElementById("troncoEsquerdo");
+            troncoEsquerdo.removeAttribute("hidden");
+        } else if (vidas.value == 0) {
+            cabeca = document.getElementById("cabeca");
+            cabeca.removeAttribute("hidden");
+            
             alert("Você perdeu");
             recarregaPagina();
         }
@@ -136,7 +165,7 @@ function verificaLetra(letra) {
 
 function recarregaPagina() {
     const tempoAtraso = 500;
-    
+
     setTimeout(function () {
         location.reload();
     }, tempoAtraso);
