@@ -2,8 +2,11 @@
 
 var divInputs = document.getElementById("palavras"),
     jaUsadas = document.querySelector(".letrasUsadas"),
-    vidas = document.getElementById("vidas");
-
+    vidas = document.getElementById("vidas"),
+    ganhou = document.getElementById("ganhou"),
+    perdeu = document.getElementById("perdeu"),
+    audioGanhou = document.getElementById("audioGanhou"),
+    audioPerdeu = document.getElementById("audioPerdeu");
 
 
 // Todas as opções de palavras que podem ser adivinhadas 
@@ -129,8 +132,8 @@ function verificaLetra(letra) {
                 // console.log(palavraEscolhida);
 
                 if (palavraEscolhida.length - cont == verificaSeGanhou.length) {
-                    alert("Parabéns!! Você ganhou")
-                    recarregaPagina();
+                    ganhou.style.display = "";
+                    audioGanhou.play();
                 }
             }
         }
@@ -149,11 +152,8 @@ function verificaLetra(letra) {
             troncoEsquerdo = document.getElementById("troncoEsquerdo");
             troncoEsquerdo.removeAttribute("hidden");
         } else if (vidas.value == 0) {
-            cabeca = document.getElementById("cabeca");
-            cabeca.removeAttribute("hidden");
-            
-            alert("Você perdeu");
-            recarregaPagina();
+            perdeu.style.display = "";
+            audioPerdeu.play();
         }
     }
 }

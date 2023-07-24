@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
-    background: rgb(179,229,159);
-    background: radial-gradient(circle, rgba(179,229,159,1) 0%, rgb(132, 190, 146) 37%);
+    background: rgb(179, 229, 159);
+    background: radial-gradient(circle, rgba(179, 229, 159, 1) 0%, rgb(132, 190, 146) 37%);
 }
 
 .txt {
@@ -63,7 +64,7 @@ html, body {
 
 .txtTentativas {
     font-size: 2em;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 #vidas {
@@ -148,10 +149,10 @@ html, body {
     flex-direction: column;
     display: grid;
     gap: 0;
-    grid-template-areas: 
-    "cabeca cabeca"
-    "troncoEsquerdo troncoDireito"
-    "pernaEsquerda pernaDireita"
+    grid-template-areas:
+        "cabeca cabeca"
+        "troncoEsquerdo troncoDireito"
+        "pernaEsquerda pernaDireita"
     ;
 }
 
@@ -195,13 +196,74 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: rgb(179, 229, 159);
+    background: radial-gradient(circle, rgba(179, 229, 159, 1) 0%, rgb(132, 190, 146) 37%);
+    z-index: 101;
+}
+
+#perdeu {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(244,12,12);
+    background: radial-gradient(circle, rgba(244,12,12,1) 0%, rgba(242,99,99,1) 35%, rgba(116,12,12,1) 100%);
+    z-index: 101;
 }
 
 #txtGanhou {
     font-size: 10em;
-    color:#000;
+    color: #000;
+    margin-bottom: 40px;
+    z-index: 101;
+}
+
+#txtPerdeu {
+    font-size: 10em;
+    color: #000;
+    margin-bottom: 40px;
+    z-index: 101;
+}
+
+#balaGanhou {
+    z-index: 101;
+}
+
+#vilgaxPerdeu {
+    z-index: 101;
+    height: 450px;
 }
 
 #btnGanhou {
-    
+    height: 65px;
+    width: 270px;
+    font-size: 2em;
+    font-weight: bold;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background-color: rgb(63, 189, 93);
+    color: #fff;
+    margin-top: 60px;
+    z-index: 101;
+}
+
+#btnPerdeu {
+    height: 65px;
+    width: 270px;
+    font-size: 2em;
+    font-weight: bold;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background-color: rgb(244,12,12);
+    color: #fff;
+    margin-top: 60px;
+    z-index: 101;
+}
+
+#btnPerdeu:active {
+    height: 50px;
+    transition: 0.5s;
 }

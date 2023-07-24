@@ -35,21 +35,29 @@
             </div>
             <div id="vilgax">
                 <img src="/IMG/cabeça.png" alt="" id="cabeca" hidden>
-                
+
                 <img src="/IMG/tronco_esquerdo.png" alt="" id="troncoEsquerdo" hidden>
                 <img src="/IMG/tronco_direito.png" alt="" id="troncoDireito" hidden>
 
                 <img src="/IMG/perna_esquerda.png" alt="" id="pernaEsquerda" hidden>
                 <img src="/IMG/perna_direita.png" alt="" id="pernaDireita" hidden>
             </div>
-            <div>
-            </div>
         </div>
-        <div id="ganhou">
-            <h1 id="txtGanhou">VOCÊ GANHOU!!</h1>
-            <img src="/VID/Bala_de_canhao.gif" alt="Gif bala de canhão">
-            <button onclick="recarregaPagina()" id="btnGanhou">Jogar de novo</button>
+        <div id="ganhou" style="display: none;">
+            <h1 id="txtGanhou">VOCÊ GANHOU!</h1>
+            <img src="/VID/Bala_de_canhao.gif" alt="Bala de canhao dançando" id="balaGanhou">
+            <button class="btn" id="btnGanhou" onclick="recarregaPagina()">Jogar Novamente</button>
+            <audio src="/AUD/Ben10sound.mp3" id="audioGanhou"></audio>
+        </div>
+
+        <div id="perdeu" style="display: none;">
+            <h1 id="txtPerdeu">VOCÊ PERDEU</h1>
+            <img src="/IMG/vilgaxPerdeu.png" alt="Vilgax Mamadissimo" id="vilgaxPerdeu">
+            <button class="btn" id="btnPerdeu" onclick="recarregaPagina()">Tentar De Novo</button>
+            <audio src="/AUD/vilgaxsound.mp3" id="audioPerdeu"></audio>
+        </div>
     </div>
+        
     <script src="script.js"></script>
 </body>
 
