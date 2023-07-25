@@ -6,20 +6,26 @@ var divInputs = document.getElementById("palavras"),
     ganhou = document.getElementById("ganhou"),
     perdeu = document.getElementById("perdeu"),
     audioGanhou = document.getElementById("audioGanhou"),
-    audioPerdeu = document.getElementById("audioPerdeu");
+    audioPerdeu = document.getElementById("audioPerdeu"),
+    audioFundo = document.getElementById("audioFundo");
 
 
 // Todas as opções de palavras que podem ser adivinhadas 
 
 const aliens = [
-    "ACELERADO", "ALIENX", "AQUATICO", "ARTROPODE",
-    "ATOMICO", "BALA DE CANHAO", "BESTA", "CHAMA",
-    "CIPO SELVAGEM", "CROMATICO", "DIAMANTE", "ECO ECO",
-    "ENORMOSSAURO", "FEEDBACK", "FOGO FATUO", "FRIAGEM",
-    "GIGANTE", "GOSMA", "INSECTOIDE", "MACACO ARANHA",
-    "QUATRO BRACOS", "XLR8", "ARRAIA A JATO", "MASSA CINZENTA",
-    "BILAU GIGANTE", "ULTRA T", "SHOCKSQUATCH", "GRAVATTACK",
-    "TARTAGIRA", "ARMATU", "NRG", "FANTASMATICO"
+    "ACELERADO", "ALIEN X", "AQUATICO", "ARTROPODE", "ATOMICO", 
+    "BALA DE CANHAO", "BESTA", "CHAMA", "CIPO SELVAGEM", "CROMATICO", 
+    "DIAMANTE", "ECO ECO", "ENORMOSSAURO", "FEEDBACK", "FOGO FATUO", 
+    "FRIAGEM", "GIGANTE", "GOSMA", "INSECTOIDE", "MACACO ARANHA",
+    "QUATRO BRACOS", "XLR8", "ARRAIA A JATO", "MASSA CINZENTA", "BILAU GIGANTE",
+    "ULTRA T", "SHOCKSQUATCH", "GRAVATTACK", "TARTAGIRA", "ARMATU", 
+    "NRG", "FANTASMATICO", "LOBISBEN", "BENMUMIA", "BEN VICTOR", 
+    "GLUTAO", "CLONE", "MEGA OLHOS", "CHOCANTE", "IGUANA ARTICA", 
+    "CUSPIDOR", "ESTRELA POLAR", "RATH", "NANOMECH", "AMEAÇA AQUATICA", 
+    "ANFIBIO", "CONTRA TEMPO", "CHAMALIEN", "DIABRETE", "BESOURO", 
+    "BLOXX", "ESCARABOLA", "CRASHHOPPER", "COCOROCOIDE", "WALKATRUTA", 
+    "PESKY DUST", "BIGOTOIDE", "ESPANTOIDE", "ASTRODACTILO", "O PIOR", 
+    "VOMPIRO", "PODRAO", "BULLFRAG"
 ];
 
 
@@ -123,16 +129,17 @@ function verificaLetra(letra) {
                 cont++
                 console.log(cont);
             }
-
+            
             if (letra === palavraEscolhida[i]) {
                 inputLetra.value += palavraEscolhida[i];
                 verificaSeGanhou.push(letra);
-
+                
                 // console.log(verificaSeGanhou);
                 // console.log(palavraEscolhida);
 
                 if (palavraEscolhida.length - cont == verificaSeGanhou.length) {
                     ganhou.style.display = "";
+                    audioFundo.pause();
                     audioGanhou.play();
                 }
             }
@@ -153,12 +160,11 @@ function verificaLetra(letra) {
             troncoEsquerdo.removeAttribute("hidden");
         } else if (vidas.value == 0) {
             perdeu.style.display = "";
+            audioFundo.pause();
             audioPerdeu.play();
         }
     }
 }
-
-
 
 
 // Reseta a págida depois de ganhar ou perder o jogo
@@ -171,6 +177,8 @@ function recarregaPagina() {
     }, tempoAtraso);
 }
 
+
+audioFundo.play();
 
 
 sorteiaPalavra(aliens);

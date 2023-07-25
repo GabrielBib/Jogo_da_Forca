@@ -5,22 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/IMG/Icone_forca.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/image/Icone_forca.png" type="image/x-icon">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Jogo da Forca</title>
 </head>
 
 <body>
+    <audio src="/audio/Ben10Forro.mp3" id="audioFundo" autoplay loop></audio>
     <div class="logoBen10">
-        <img src="/IMG/Logo_ben_10.png" alt="Logo Ben 10" class="fundo">
+        <img src="/image/Logo_ben_10.png" alt="Logo Ben 10" class="fundo">
     </div>
     <div class="geral">
         <div class="areaJogo">
             <h1 class="txt title">Jogo da Forca</h1>
             <div class="contadorVidas">
                 <h1 class="txt txtTentativas">Tentativas</h1>
-                <img src="/IMG/Contador_vidas.png" alt="Contador de vidas" class="areaVidas">
+                <img src="/image/Contador_vidas.png" alt="Contador de vidas" class="areaVidas">
                 <input type="text" value="5" readonly id="vidas">
             </div>
             <div id="palavras"></div>
@@ -34,30 +35,30 @@
                 </div>
             </div>
             <div id="vilgax">
-                <img src="/IMG/cabeça.png" alt="" id="cabeca" hidden>
+                <img src="/image/cabeça.png" alt="Cabeça do Vilgax" id="cabeca" hidden>
 
-                <img src="/IMG/tronco_esquerdo.png" alt="" id="troncoEsquerdo" hidden>
-                <img src="/IMG/tronco_direito.png" alt="" id="troncoDireito" hidden>
+                <img src="/image/tronco_esquerdo.png" alt="Tronco esquerdo do Vilgax" id="troncoEsquerdo" hidden>
+                <img src="/image/tronco_direito.png" alt="Tronco direito do Vilgax" id="troncoDireito" hidden>
 
-                <img src="/IMG/perna_esquerda.png" alt="" id="pernaEsquerda" hidden>
-                <img src="/IMG/perna_direita.png" alt="" id="pernaDireita" hidden>
+                <img src="/image/perna_esquerda.png" alt="Perna esquerda do Vilgax" id="pernaEsquerda" hidden>
+                <img src="/image/perna_direita.png" alt="Perna direita do Vilgax" id="pernaDireita" hidden>
             </div>
         </div>
         <div id="ganhou" style="display: none;">
-            <h1 id="txtGanhou">VOCÊ GANHOU!</h1>
-            <img src="/VID/Bala_de_canhao.gif" alt="Bala de canhao dançando" id="balaGanhou">
+            <h1 id="txtGanhou" class="txt">VOCÊ GANHOU!</h1>
+            <img src="/video/Bala_de_canhao.gif" alt="Bala de canhao dançando" id="balaGanhou">
             <button class="btn" id="btnGanhou" onclick="recarregaPagina()">Jogar Novamente</button>
-            <audio src="/AUD/Ben10sound.mp3" id="audioGanhou"></audio>
+            <audio src="/audio/Ben10sound.mp3" id="audioGanhou" loop></audio>
         </div>
 
         <div id="perdeu" style="display: none;">
-            <h1 id="txtPerdeu">VOCÊ PERDEU</h1>
-            <img src="/IMG/vilgaxPerdeu.png" alt="Vilgax Mamadissimo" id="vilgaxPerdeu">
+            <h1 id="txtPerdeu" class="txt">VOCÊ PERDEU</h1>
+            <img src="/image/vilgaxPerdeu.png" alt="Vilgax Mamadissimo" id="vilgaxPerdeu">
             <button class="btn" id="btnPerdeu" onclick="recarregaPagina()">Tentar De Novo</button>
-            <audio src="/AUD/vilgaxsound.mp3" id="audioPerdeu"></audio>
+            <audio src="/audio/vilgaxsound.mp3" id="audioPerdeu" loop></audio>
         </div>
     </div>
-        
+    
     <script src="script.js"></script>
 </body>
 
